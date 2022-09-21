@@ -81,6 +81,7 @@ int main(){
 
     }
 
+
     printf("---------");
     printf("\n");
     printf(" A B C D ");
