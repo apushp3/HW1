@@ -1,20 +1,31 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<ctype.h>
 
 int main(){
 
     int number1, number2, number3;
 
     printf(" Enter an integer ");
-    scanf("%d", &number1);
+    int ret1 = scanf("%d", &number1);
+
+    if ( ret1 != 1){
+        printf(" INVALID INPUT ");
+        return 0;
+    }
 
     printf(" Enter an integer ");
-    scanf("%d", &number2);
+    int ret2 = scanf("%d", &number2);
+
+    if( ret2 != 1 ){
+        printf(" INVALID INPUT ");
+        return 0;
+    }
 
     printf(" Enter an integer ");
-    scanf("%d", &number3);
+    int ret3 = scanf("%d", &number3);
 
-    if(number1 < 0 || number2 < 0 || number3 < 0){
+    if( ret3 != 1 ){
         printf(" INVALID INPUT ");
         return 0;
     }

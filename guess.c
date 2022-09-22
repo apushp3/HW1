@@ -33,10 +33,13 @@ int main(int argc, char *argv[]) {
   while(1){
     
     printf(" your guess ");
+
     scanf("%d", &guess);
 
-    
-    if(guess < target/4){
+    if (guess < 0 || guess > 99){
+      printf(" OOPS - NOT IN RANGE 0..99.  NO GUESS CHARGED" );
+    }
+    else if(guess < target/4){
       printf(" COME ON, THAT'S IMPOSSIBLE ");
       count = count + 1;
     }
@@ -48,16 +51,14 @@ int main(int argc, char *argv[]) {
       printf(" TOO BIG ");
       count = count + 1;
     }
-    else if( guess < 0 || guess > 99 ){
-      printf(" OOPS - NOT IN RANGE 0..99.  NO GUESS CHARGED ");
-    }
     else if( guess == target ){
       printf(" YOU GOT IT! ");
+      printf("\n\n");
       count = count + 1;
-      printf(" NUMBER OF GUESS %d", count);
+      printf(" NUMBER OF GUESSES %d", count);
       return 0;
     }
-    printf("\n");
+    printf("\n\n");
   }
 
 
